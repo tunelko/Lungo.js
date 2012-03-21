@@ -74,6 +74,20 @@ LUNGO.View.Scroll = (function(lng, undefined) {
     };
 
     /**
+     * Prepend <markup> content to iScroll instance
+     *
+     * @method append
+     *
+     * @param {string} Id of the container scroll.
+     * @param {string} Markup content
+     */
+    var prepend = function(id, content) {
+        var container = _getContainer(id);
+        container.prepend(content);
+
+        _render(id);
+    };
+    /**
      * Refresh iScroll instance.
      *
      * @method refresh
